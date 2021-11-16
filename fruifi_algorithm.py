@@ -1,9 +1,9 @@
-import pandas as pd
+import pandas
 import re
 
 
 #export csv file
-nd = pd.read_csv("FruitNutritionsDetails.csv") #nd = nutrition details
+nd = pandas.read_csv(r'G:/Work/algorithm/aplpha.csv') #nd = nutrition details
 
 
 #convert column into lists
