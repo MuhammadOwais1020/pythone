@@ -58,6 +58,7 @@ def check_good_bad(desise):
             print(fruit_name)
 
 
+#program starts
 print("1. Check Nutrition Details")
 print("2. Check fruit is good or not for particular desise")
 option = input("Enter number >> ")
