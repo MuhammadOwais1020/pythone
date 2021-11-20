@@ -8,7 +8,7 @@ good_for = []
 bad_for = []
 
 
-with open('aplpha.csv', 'r') as csv_file:
+with open('FruitNutritionsDetails.csv', 'r') as csv_file:
     try:
         csv_reader = csv.reader(csv_file)
         next(csv_reader, None) #skip first header line
