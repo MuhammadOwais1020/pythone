@@ -126,71 +126,128 @@ public class HelloWorld{
         for(String disease : diseases){
         // good for 
         if(apple_good_for.contains(disease)){
-            good.add("apple");
+            if(!(good.contains("apple"))){
+                good.add("apple");    
+            }
         }
         if(strawberry_good_for.contains(disease)){
-            good.add("strawberry");
+            if(!(good.contains("strawberry"))){
+                good.add("strawberry");    
+            }
         }
         if(banana_good_for.contains(disease)){
-            good.add("banana");
+            if(!(good.contains("banana"))){
+                good.add("banana");    
+            }
         }
         if(papaya_good_for.contains(disease)){
-            good.add("papaya");
+            if(!(good.contains("papaya"))){
+                good.add("papaya");    
+            }
         }
         if(orange_good_for.contains(disease)){
-            good.add("orange");
+            if(!(good.contains("orange"))){
+                good.add("orange");    
+            }
         }
         if(pineapple_good_for.contains(disease)){
-            good.add("pineapple");
+            if(!(good.contains("pineapple"))){
+                good.add("pineapple");    
+            }
         }
         if(grapefruit_good_for.contains(disease)){
-            good.add("grapefruit");
+            if(!(good.contains("grapefruit"))){
+                good.add("grapefruit");    
+            }
         }       
         if(mango_good_for.contains(disease)){
-            good.add("mango");
+            if(!(good.contains("mango"))){
+                good.add("mango");    
+            }
         }
         if(watermelon_good_for.contains(disease)){
-            good.add("watermelon");
+            if(!(good.contains("watermelon"))){
+                good.add("watermelon");    
+            }
         }
         if(guava_good_for.contains(disease)){
-            good.add("guava");
+            if(!(good.contains("guava"))){
+                good.add("guava");    
+            }
         }
 
         // bad for
         if(apple_bad_for.contains(disease)){
-            bad.add("apple");
+            if(!(bad.contains("apple"))){
+                bad.add("apple");    
+            }
         }
         if(strawberry_bad_for.contains(disease)){
-            bad.add("strawberry");
+            if(!(bad.contains("strawberry"))){
+                bad.add("strawberry");    
+            }
         }
         if(banana_bad_for.contains(disease)){
-            bad.add("banana");
+            if(!(bad.contains("banana"))){
+                bad.add("banana");    
+            }
         }
         if(papaya_bad_for.contains(disease)){
-            bad.add("papaya");
+            if(!(bad.contains("papaya"))){
+                bad.add("papaya");    
+            }
         }
         if(orange_bad_for.contains(disease)){
-            bad.add("orange");
+            if(!(bad.contains("orange"))){
+                bad.add("orange");    
+            }
         }
         if(pineapple_bad_for.contains(disease)){
-            bad.add("pineapple");
+            if(!(bad.contains("pineapple"))){
+                bad.add("pineapple");    
+            }
         }
         if(grapefruit_bad_for.contains(disease)){
-            bad.add("grapefruit");
+            if(!(bad.contains("grapefruit"))){
+                bad.add("grapefruit");    
+            }
         }       
         if(mango_bad_for.contains(disease)){
-            bad.add("mango");
+            if(!(bad.contains(""))){
+                bad.add("mango");    
+            }
         }
         if(watermelon_bad_for.contains(disease)){
-            bad.add("watermelon");
+            if(!(bad.contains("watermelon"))){
+                bad.add("watermelon");    
+            }
         }
         if(guava_bad_for.contains(disease)){
-            bad.add("guava");
+            if(!(bad.contains("guava"))){
+                bad.add("guava");    
+            }
         }
         }
         
+        System.out.println("Good for fever: " + good);
+        System.out.println("Bad for fever: " + bad);
         
+        ArrayList<String> common_elements = new ArrayList<String>();
         
+        for(int i = 0; i < good.size(); i++){
+            for(int j = 0; j < bad.size(); j++){
+                if(good.get(i) == bad.get(j)){
+                    common_elements.add(good.get(i));
+                }
+            }
+        }
+        
+        for(String elem : common_elements){
+            good.remove(elem);
+            bad.remove(elem);
+        }
+        
+        System.out.println("Good After Intersection: ");
         System.out.println("Good for fever: " + good);
         System.out.println("Bad for fever: " + bad);
     }
