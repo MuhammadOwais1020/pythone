@@ -228,9 +228,9 @@ public class HelloWorld{
             }
         }
         }
-        
-        System.out.println("Good for fever: " + good);
-        System.out.println("Bad for fever: " + bad);
+        System.out.println("\nDiseases: " + diseases+"\n");
+        System.out.println("Good to eat: " + good);
+        System.out.println("Bad to eat: " + bad);
         
         ArrayList<String> common_elements = new ArrayList<String>();
         
@@ -247,8 +247,9 @@ public class HelloWorld{
             bad.remove(elem);
         }
         
-        System.out.println("Good After Intersection: ");
-        System.out.println("Good for fever: " + good);
-        System.out.println("Bad for fever: " + bad);
+        
+        System.out.println("\nAfter Symetric Difference \n");
+        System.out.println("Good to eat: " + good);
+        System.out.println("Bad to eat: " + bad);
     }
 }
