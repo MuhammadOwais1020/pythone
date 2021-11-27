@@ -227,12 +227,14 @@ public class HelloWorld{
                 bad.add("guava");    
             }
         }
-        }
+        }  
         System.out.println("\nDiseases: " + diseases+"\n");
         System.out.println("Good to eat: " + good);
         System.out.println("Bad to eat: " + bad);
         
-        ArrayList<String> common_elements = new ArrayList<String>();
+        ArrayList<String> common_elements = new ArrayList<String>(
+            
+        );
         
         for(int i = 0; i < good.size(); i++){
             for(int j = 0; j < bad.size(); j++){
@@ -252,4 +254,5 @@ public class HelloWorld{
         System.out.println("Good to eat: " + good);
         System.out.println("Bad to eat: " + bad);
     }
+    
 }

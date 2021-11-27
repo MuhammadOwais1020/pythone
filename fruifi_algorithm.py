@@ -65,25 +65,23 @@ with open('FruitNutritionsDetails.csv', 'r') as csv_file:
  
  
         #program starts
-        json_object = json.dumps(fruits, indent = 4) 
-        print(json_object)
-        # print("1. Check Nutrition Details")
-        # print("2. Check fruit is good or not for particular desise")
-        # option = input("Enter number >> ")
+        print("1. Check Nutrition Details")
+        print("2. Check fruit is good or not for particular desise")
+        option = input("Enter number >> ")
 
-        # if int(option) == 1:
-        #     print("Check for Fruits Neutritions")
-        #     i = 1
-        #     for fruit_name in fruits:
-        #         print(str(i) + ". " + fruit_name)
-        #         i += 1
+        if int(option) == 1:
+            print("Check for Fruits Neutritions")
+            i = 1
+            for fruit_name in fruits:
+                print(str(i) + ". " + fruit_name)
+                i += 1
 
 
-        #     fruit_name = input("Type fruit name >> ")
-        #     give_details(fruit_name)
+            fruit_name = input("Type fruit name >> ")
+            give_details(fruit_name)
 
-        # elif int(option) == 2:
-        #     desise = input("What you are feeling now >> ")
-        #     check_good_bad(desise)
+        elif int(option) == 2:
+            desise = input("What you are feeling now >> ")
+            check_good_bad(desise)
     except:
         print("File reading error")
